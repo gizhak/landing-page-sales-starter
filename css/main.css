@@ -1,0 +1,9 @@
+/* Main CSS - Imports all styles */
+@import url(base/vars.css);
+@import url(base/base.css);
+
+@import url(cmps/header.css);
+@import url(cmps/footer.css);
+@import url(cmps/home.css);
+@import url(cmps/products.css);
+@import url(cmps/testimonials.css);

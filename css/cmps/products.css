@@ -1,0 +1,117 @@
+/* Products Section */
+.products-section {
+    padding: 5rem 0;
+    background: var(--gray1);
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    color: var(--clr-text-light);
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.product-features li {
+    padding: 0.5rem 0;
+    color: var(--clr-text);
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.product-features li::before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: var(--clr-accent);
+    font-weight: bold;
+}
+
+.product-button {
+    background: var(--clr-secondary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.product-button:hover {
+    background: var(--clr-primary);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products-section {
+        padding: 3rem 0;
+    }
+
+    .products-section h2 {
+        font-size: 2rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* RTL Fixes */
+[dir="rtl"] .product-features li {
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+[dir="rtl"] .product-features li::before {
+    right: 0;
+    left: auto;
+}

@@ -1,0 +1,123 @@
+/* Header Component */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--clr-primary);
+    margin: 3px 0;
+    transition: var(--transition);
+    border-radius: 3px;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu button {
+    background: none;
+    border: none;
+    color: var(--clr-text);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    border-radius: 4px;
+}
+
+.nav-menu button:hover {
+    color: var(--clr-secondary);
+    background: var(--gray1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+    }
+
+    .nav-menu.open {
+        left: 0;
+    }
+
+    .nav-menu button {
+        text-align: right;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* RTL Fixes */
+[dir="rtl"] .nav-menu {
+    left: auto;
+    right: -100%;
+}
+
+[dir="rtl"] .nav-menu.open {
+    left: auto;
+    right: 0;
+}

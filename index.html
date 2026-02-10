@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - דף נחיתה</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo" id="brand-name">המותג שלך</div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <button data-section="home">דף הבית</button>
+                <button data-section="about">אודות</button>
+                <button data-section="products">מוצרים</button>
+                <button data-section="testimonials">המלצות</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="home-page">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <img id="user-image" src="" alt="Profile Image" class="hero-image">
+                <h1 id="user-name"></h1>
+                <h2 id="user-title"></h2>
+                <p id="user-description" class="hero-description"></p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>אודותיי</h2>
+                <div class="about-content">
+                    <p>
+                        כתוב כאן פרטים נוספים על עצמך. הניסיון שלך, התשוקה שלך,
+                        המומחיות שלך, ולמה לקוחות צריכים לבחור בך.
+                    </p>
+                    <p>
+                        הוסף פסקאות נוספות כפי הצורך כדי לספר את הסיפור שלך ולבנות אמון
+                        עם לקוחות פוטנציאליים.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>המוצרים שלנו</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>מה הלקוחות שלנו אומרים</h2>
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- Testimonials will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>צור קשר</h3>
+                <a href="" id="phone-link" class="phone-link">
+                    📞 <span id="phone-number"></span>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; <span id="current-year"></span> כל הזכויות שמורות</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.controller.js"></script>
+</body>
+
+</html>
