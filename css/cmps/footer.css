@@ -1,0 +1,70 @@
+/* Footer Component */
+.app-footer {
+    background: var(--clr-primary);
+    color: white;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.phone-link {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.phone-link:hover {
+    color: var(--clr-accent);
+    transform: scale(1.05);
+}
+
+.footer-copyright {
+    text-align: left;
+}
+
+.footer-copyright p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+}
+
+/* RTL Fixes */
+[dir="rtl"] .footer-copyright {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .footer-copyright {
+        text-align: center;
+    }
+}

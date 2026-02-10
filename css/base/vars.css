@@ -1,0 +1,13 @@
+/* CSS Variables */
+:root {
+    --clr-primary: #2C3E50;
+    --clr-secondary: #3498DB;
+    --clr-accent: #1ABC9C;
+    --clr-text: #2C3E50;
+    --clr-text-light: #7F8C8D;
+    --gray1: #F8F9FA;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
